@@ -1,0 +1,38 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+/*  grid-gap: 2px; */
+/*  grid-auto-rows: minmax(2px, auto); */
+  font-size: 28px;
+  padding: 3px;
+  width: 25vw;
+  text-align: center;
+  padding: 30vw;
+}
+
+.button {
+  height: 10em;
+  width: 8em;
+  font-size: .5em;
+  background-color: #7D67F6;
+}
+
+#myResult {
+  grid-column: 2/5;
+  font-size: .5em;
+  grid-row: 1;
+  background-color: #B7ADF6
+}
+
+ #BC {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
+.oper {
+  height: 10em;
+  width: 8em;
+  font-size: .5em;
+  background-color: #B7ADF6;
+}
