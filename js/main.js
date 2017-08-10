@@ -6,38 +6,32 @@ calc.addEventListener("click", myCallBack);
 let result = "";
 
 function myCallBack(){
-  console.log("In myCallBack");
   let key = event.target.id;
-  console.log(key);
   handleKey(key);
 }
 
+
 function handleKey (key){
+  let val = document.getElementById(key).value;
 switch (key) {
-  case 'plus':
-    result += " + ";
-    break;
-  case 'minus':
-    result += " - ";
-    break;
-  case 'times':
-    result += " x ";
-    break;
-  case 'divide':
-    result += " - ";
-    break;
-  case 'dot':
-    result += ".";
-    break;
   case 'eq':
-    complete();
+    complete(result);
     break;
   case 'clear':
-    clearInput();
+    result = "";
+    document.getElementById("myResult").value = "";
+    break;
+  case 'times':
+    result += "*";
     break;
   default:
-    result += key;
-
+    result += val;
+    document.getElementById("myResult").value = result;
   } /* switch */
-  console.log(result);
+
 } /* handleKey */
+
+function complete(result) {
+  let answer = eval(result);
+  document.getElementById("myResult").value = answer;
+}
