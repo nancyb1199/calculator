@@ -1,7 +1,7 @@
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  font-size: 28px;
+  font-size: 26px;
   width: 50vw;
   height: 60vh;
   text-align: center;
