@@ -23,6 +23,7 @@ switch (key) {
     break;
   case 'times':
     result += "*";
+    document.getElementById("myResult").value = result;
     break;
   default:
     result += val;
